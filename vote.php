@@ -39,6 +39,7 @@
     }
 
     .tag{
+        font-weight: 700;
         font-size: 20px;
         text-align: center;
         position: relative;
@@ -64,7 +65,31 @@
         background-color: #252727;
     }
 
+    h2{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+        padding: 5px;
+        text-decoration:none;
+        font-size: 20px;
+        background-color: beige;
+        border-radius: 10px;
+        border: 2px solid black;
+    } 
 
+    /* h3{
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 5px;
+        text-decoration: none;
+        background-color: beige;
+        border-radius: 10px;
+        color: red;
+        border: 2px solid;
+    }  */
 
     </style>
 </head>
@@ -83,20 +108,26 @@
             $id = $_POST['b'];
             $age = $_POST['c'];
 
-            if($name)
-            {
-                echo'name :-'.$name.' <br>';
-            }
-            if($id){
-                echo'id :-'.$id.' <br>';
-            }
+                echo'<h2>Name is:-'.$name.' </h2>';
+
+                echo'<h2>Your id:-'.$id.'</h2>';
+
             if($age >= 18){
-                echo "your allow for vote";
+                echo "<h2>your allow for vote</h2>";
+
             }else {
-                echo"your not allow for vote because your 18 under";
+                // echo"<h3>Your Not Allow For Vote Because Your 18 under</h3>";
+                function function_alert($message) {
+
+                    // Display the alert box 
+                    echo "<script>alert('$message');</script>";
+                }
+                
+                // Function call
+                function_alert("your not allow for vote because your 18 under");
             }
         }
         ?>
     </form>
 </body>
-</html
+</html>
